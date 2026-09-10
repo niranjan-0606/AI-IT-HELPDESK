@@ -1,0 +1,23 @@
+# Environment and Secrets
+.env
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Vector Database and embeddings
+vectorstore/
+*.bin
+*.pkl
+
+# SQLite Databases
+data/*.db
+data/*.sqlite
+
+# Logs and IDE
+*.log
+.vscode/
+.idea/
+.DS_Store
