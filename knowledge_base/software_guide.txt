@@ -1,0 +1,19 @@
+# CAMPUS IT SERVICES - SOFTWARE INSTALLATION & LICENSING GUIDE
+
+## 1. Campus Licensed Software Hub
+Students and faculty have free access to academic licenses:
+- MATLAB & Simulink: Access via mathworks.com using your @college.edu address.
+- Microsoft Office 365: Download from portal.office.com; license supports up to 5 concurrent devices.
+- AutoCAD & Autodesk Suite: Educational licenses must be renewed annually with student enrollment verification.
+- Adobe Creative Cloud: Available on designated multimedia lab workstations in the Fine Arts building.
+
+## 2. Installation Failures and Permissions
+- Administrator Privileges: Personal laptops should install software under an account with local admin privileges.
+- Antivirus False Positives: Windows Defender occasionally blocks compiler tools or Python pip installations. Add project workspace folders to Windows Defender exclusions.
+- Missing DLL Dependencies: Install both Microsoft Visual C++ 2015-2022 redistributables (x64 and x86) to resolve VCRUNTIME140.dll and MSVCP140.dll errors.
+
+## 3. Application Not Responding & Task Termination
+If an application freezes:
+- Open Task Manager (Ctrl + Shift + Esc).
+- Under Processes, locate the application, right-click, and choose "End Task".
+- Check system resource consumption (CPU and RAM usage). If RAM utilization exceeds 90%, close memory-intensive browser tabs before restarting the engineering tool.

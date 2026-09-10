@@ -1,0 +1,32 @@
+# CAMPUS IT SERVICES - NETWORK TROUBLESHOOTING GUIDE
+
+## 1. Wi-Fi Connectivity and "No Internet" Issues
+When your device connects to the Wi-Fi network (Campus-WiFi or eduroam) but displays "Connected, no internet access":
+- Verify Wi-Fi Authentication: Ensure your university login credentials (username@college.edu) have not expired.
+- Toggle Wi-Fi: Disable Wi-Fi on your device, wait 10 seconds, and reconnect.
+- Forget Network: In Windows Settings > Network & Internet > Wi-Fi > Manage known networks, select the campus network and click "Forget", then reconnect and re-enter your university credentials.
+- IP Lease Renewal: Run Command Prompt as Administrator and execute:
+    ipconfig /release
+    ipconfig /renew
+- Flush DNS Cache: Execute:
+    ipconfig /flushdns
+
+## 2. Slow Internet and High Latency
+If browsing or downloads are unusually sluggish:
+- Disable VPNs or Proxy software that may conflict with the campus firewall.
+- Ensure your network adapter is using 5GHz band rather than congested 2.4GHz: In Device Manager > Network Adapters > Advanced, set Preferred Band to "Prefer 5GHz".
+- Check bandwidth-heavy background tasks such as Steam downloads or OneDrive synchronization.
+- Average campus ping latency should remain between 10ms and 45ms. If ping loss exceeds 10%, report the access point location to IT.
+
+## 3. DNS Configuration and Gateway Failure
+If web pages fail to load with DNS_PROBE_FINISHED_NXDOMAIN:
+- Set automatic DNS server addressing (DHCP) or configure primary campus DNS:
+    Preferred DNS: 1.1.1.1 or 8.8.8.8
+    Alternate DNS: 8.8.4.4
+- Restart the DNS Client service via services.msc.
+- Ensure Ethernet cables are firmly clicked into wall jacks (RJ-45) in campus computer labs.
+
+## 4. IP Address Conflicts (169.254.x.x APIPA)
+If your computer assigns itself an IP address starting with 169.254, it failed to obtain a dynamic IP from the campus DHCP server:
+- Check if your MAC address has been registered on the campus device portal (devices.college.edu).
+- Restart your router or contact the IT Helpdesk if in dormitory housing.

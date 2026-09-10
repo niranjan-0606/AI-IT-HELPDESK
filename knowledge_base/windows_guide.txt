@@ -1,0 +1,28 @@
+# CAMPUS IT SERVICES - WINDOWS OPERATING SYSTEM GUIDE
+
+## 1. Windows Startup and Boot Issues
+If Windows 10/11 fails to boot properly or enters an Automatic Repair loop:
+- Hard Reboot: Power off completely, unplug all external USB drives and peripherals except keyboard/mouse, and boot up again.
+- Safe Mode: Hold Shift while clicking Restart from the Windows login screen, navigate to Troubleshoot > Advanced options > Startup Settings > Restart, then select F4 (Enable Safe Mode).
+- Startup Repair: Choose Troubleshoot > Advanced Options > Startup Repair to let Windows fix corrupted BCD files.
+- System File Checker: Open Command Prompt in Recovery Environment and run:
+    sfc /scannow
+    dism /online /cleanup-image /restorehealth
+
+## 2. Application Crashes and Freezes
+When critical software (such as MATLAB, VS Code, AutoCAD, or Office) crashes unexpectedly:
+- Check Event Viewer: Press Win + X, open Event Viewer > Windows Logs > Application, and look for "Error" entries with Event ID 1000.
+- Update C++ Runtimes: Most crashes with error code 0xC0000005 or missing .dll files are resolved by installing the Microsoft Visual C++ 2015-2022 Redistributable (x64 and x86).
+- Run as Administrator: Right-click the app executable and select "Run as Administrator".
+- Clear Application Temp Files: Press Win + R, enter `%TEMP%`, and delete unnecessary cached files.
+
+## 3. Windows Updates and Stuck Installations
+If Windows Update displays error 0x80070002 or download hangs at 100%:
+- Stop Update Services:
+    net stop wuauserv
+    net stop bits
+- Rename cache folder: Rename `C:\Windows\SoftwareDistribution` to `SoftwareDistribution.old`.
+- Restart services:
+    net start wuauserv
+    net start bits
+- Ensure at least 15GB of free space is available on the primary C: partition before initiating major feature updates.

@@ -1,0 +1,22 @@
+# CAMPUS IT SERVICES - PRINTER TROUBLESHOOTING GUIDE
+
+## 1. Printer Offline Status
+If a campus laboratory printer (e.g. CS-Lab-HP-LaserJet) displays "Printer Offline" on your laptop:
+- Check Physical State: Ensure the printer power LED is solid green, paper trays 1 & 2 are loaded, and the Ethernet indicator is blinking on the rear port.
+- Disable "Use Printer Offline": Open Control Panel > Devices and Printers, right-click the printer, select "See what's printing" > Printer menu, and uncheck "Use Printer Offline".
+- Restart the Print Spooler: Open services.msc, locate "Print Spooler", click Restart. Or execute via elevated Command Prompt:
+    net stop spooler
+    del /Q /F /S "%systemroot%\System32\Spool\Printers\*.*"
+    net start spooler
+- Verify Campus VPN: If you are connecting from home or student dorms, you must be connected to the Campus GlobalProtect VPN to reach network printers.
+
+## 2. Print Queue Stuck and Document Stalling
+When documents queue up with status "Deleting..." or "Error - Printing":
+- Clear the spooler directory using the steps above.
+- Cancel all active jobs from the printer queue window before printing a test page.
+- Test direct IP printing: In Printer Properties > Ports > Configure Port, verify the printer IP matches the IP shown on the printer's LCD network menu.
+
+## 3. Garbled Characters, Driver Corruption & Blank Pages
+If the printer prints hundreds of pages with random symbols:
+- Corrupted Driver: Delete the generic Windows driver. Download and install the HP Universal Print Driver (PCL6 or PostScript) from the campus software portal.
+- Paper Jam Clearing: Open the front toner access door, pull out the drum unit, gently extract jammed paper in the direction of feed, and close firmly.

@@ -1,0 +1,20 @@
+# CAMPUS IT SERVICES - ACCOUNT & SECURITY ACCESS GUIDE
+
+## 1. University Single Sign-On (SSO) & Password Reset
+If you cannot log into the Student Portal, Canvas LMS, or Campus Email:
+- Self-Service Password Portal: Visit https://account.college.edu/reset and enter your Student ID / Faculty ID.
+- Reset Verification: A one-time verification code (OTP) will be dispatched to your recovery mobile phone or personal email on file.
+- Password Complexity Rules: Must be at least 12 characters with at least one uppercase letter, one lowercase letter, one number, and one special symbol (!@#$%^&*).
+- Passwords must not contain your first or last name, and cannot match the previous 4 passwords.
+
+## 2. Account Lockout Policies
+- Account lockout triggers automatically after 5 consecutive incorrect password entries to prevent brute-force attacks.
+- Lockout Duration: The temporary freeze lasts 30 minutes. If urgent access is required during examination periods, visit the IT Service Desk in person with government or university photo ID to request immediate manual unlocking.
+
+## 3. Two-Factor Authentication (2FA / MFA) Issues
+- Duo Mobile / Google Authenticator prompt not arriving: Verify that your smartphone clock is synced to automatic network time.
+- Lost or Replaced Phone: Contact the IT Helpdesk at (555) 019-2834 or create a critical support ticket to generate temporary single-use bypass codes.
+
+## 4. Security Phishing Alert
+- IT staff will NEVER ask for your password over email or phone.
+- If you receive suspicious emails promising refunds or emergency account validation, forward them immediately to phishing@college.edu.
